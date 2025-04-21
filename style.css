@@ -1,0 +1,175 @@
+body {
+	background-image: url("Bookshelves.bmp");
+   	background-repeat: no-repeat;
+    background-position: top;
+	background-size: 1910px 940px;
+}
+body.showing-item .item:not(.clicked){
+     -webkit-filter: blur(2px) grayscale(0.5) opacity(0.8);
+    -moz-filter: blur(2px) grayscale(0.5) opacity(0.8);
+}
+a {
+	text-decoration: none;
+}
+.back {
+	padding: 101px 0;
+	height: 143px;
+	}
+.gallery {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 36px;
+	gap: 3px;
+	height: 147px;
+}
+.gallery .item{
+    cursor: pointer;
+	position: relative;
+    display: block;
+    float: left;
+    margin: -95px;
+    z-index: 1;
+    transform-origin:40% 40%;
+    -webkit-transform: translate3d(26px, -50px, 0) scale(0.31) rotate(-6deg);
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.7s;
+    -moz-transform: translate3d(26px, -50px, 0) scale(0.31) rotate(-6deg);
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.7s;
+}
+.gallery .item:hover {
+    z-index: 2;
+    -webkit-transform: translate3d(26px, -50px, 0) scale(0.31) rotate(-6deg) scale(1.2);
+    -moz-transform: translate3d(26px, -50px, 0) scale(0.31) rotate(-6deg) scale(1.2);
+}
+.gallery .item.clicked{
+    z-index: 3;
+    -webkit-transform:none;
+    -moz-transform:none;
+}
+.gallery .item .caption{
+    display: none;
+    border-radius: 3px 3px;
+    font-family: helvetica, arial;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.45);
+    width: 390px;
+}
+.gallery .item .caption:after{
+    background-color: #fff;
+    box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+    content: "";
+    display: block;
+    height: 15px;
+    left: -8px;
+    position: absolute;
+    top: 30%;
+    margin-top: -7px;
+    -webkit-transform: rotate( 45deg );
+    -moz-transform: rotate( 45deg );
+    width:  15px;
+}
+.gallery .item.left .caption :after{
+    right: auto;
+    left: 218px
+    box-shadow: 2px -1px 2px 0 rgba( 178, 178, 178, .4 );
+}
+.gallery .item .caption  p{
+    color: black;  
+	font-size: 17px;
+	text-indent: 1.5em;
+	text-align: justify;
+	letter-spacing: -0.5px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+			}
+.gallery .item.clicked .caption {
+    position: absolute;
+    top: -45px;
+    display: inline; 
+    -webkit-transition-property: display;
+    -webkit-transition-duration: 0.7s;
+    -moz-transition-property: display;
+    -moz-transition-duration: 0.7s;
+}
+.gallery .item.clicked.right .caption {
+    left: 115%;
+    margin-left: 15px;
+}
+.gallery .item.clicked.left .caption {
+    right: -176%;
+    margin-right: 12px;
+}
+.gallery .item .caption2{
+    display: none;
+    border-radius: 3px 3px;
+    font-family: helvetica, arial;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.45);
+    width: 390px;
+}
+.gallery .item .caption2:after{
+    background-color: #fff;
+    box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+    content: "";
+    display: block;
+    height: 15px;
+    left: -8px;
+    position: absolute;
+    top: 30%;
+    margin-top: -7px;
+    -webkit-transform: rotate( 45deg );
+    -moz-transform: rotate( 45deg );
+    width:  15px;
+}
+.gallery .item.left .caption2:after{
+    right: -8px;
+    left: auto;
+    box-shadow: 2px -1px 2px 0 rgba( 178, 178, 178, .4 );
+}
+.gallery .item .caption2 p{
+    color: black;  
+	font-size: 17px;
+	text-indent: 1.5em;
+	text-align: justify;
+	letter-spacing: -0.5px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+			}
+.gallery .item.clicked .caption2{
+    position: absolute;
+    top: -45px;
+    display: inline; 
+    -webkit-transition-property: display;
+    -webkit-transition-duration: 0.7s;
+    -moz-transition-property: display;
+    -moz-transition-duration: 0.7s;
+}
+.gallery .item.clicked.right .caption2 {
+    left: 115%;
+    margin-left: 15px;
+}
+.gallery .item.clicked.left .caption2 {
+    right: 112%;
+    margin-right: 15px;
+}
+.gallery .item.clicked img {
+    box-shadow:  0 0 25px rgba(0,0,0,0.25);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+}
+.gallery .item img {
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.7s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.7s;
+    box-shadow:  -10px 10px 25px rgba(0,0,0,0.25);
+    max-width: 100%;
+    width: 278px;
+    height: 360px;
+}
